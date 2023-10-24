@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA306FBF2AE81BD400946FAA /* GameModelKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA306FBE2AE81BD400946FAA /* GameModelKeys.swift */; };
+		AA306FBF2AE81BD400946FAA /* ScoreKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA306FBE2AE81BD400946FAA /* ScoreKeys.swift */; };
 		AA834F302AE7B84500245C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA834F2F2AE7B84500245C17 /* AppDelegate.swift */; };
 		AA834F322AE7B84500245C17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA834F312AE7B84500245C17 /* SceneDelegate.swift */; };
 		AA834F372AE7B84500245C17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA834F352AE7B84500245C17 /* Main.storyboard */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA306FBE2AE81BD400946FAA /* GameModelKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelKeys.swift; sourceTree = "<group>"; };
+		AA306FBE2AE81BD400946FAA /* ScoreKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreKeys.swift; sourceTree = "<group>"; };
 		AA834F2C2AE7B84500245C17 /* CatchKenny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatchKenny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA834F2F2AE7B84500245C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA834F312AE7B84500245C17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 			children = (
 				AA834F532AE7FA0E00245C17 /* SegueKeys.swift */,
 				AA834F552AE7FB0900245C17 /* TextConstants.swift */,
-				AA306FBE2AE81BD400946FAA /* GameModelKeys.swift */,
+				AA306FBE2AE81BD400946FAA /* ScoreKeys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 				AA834F302AE7B84500245C17 /* AppDelegate.swift in Sources */,
 				AA834F4F2AE7DFF100245C17 /* HomePageController.swift in Sources */,
 				AA834F322AE7B84500245C17 /* SceneDelegate.swift in Sources */,
-				AA306FBF2AE81BD400946FAA /* GameModelKeys.swift in Sources */,
+				AA306FBF2AE81BD400946FAA /* ScoreKeys.swift in Sources */,
 				AA834F492AE7D3D400245C17 /* GamesController.swift in Sources */,
 				AA834F542AE7FA0E00245C17 /* SegueKeys.swift in Sources */,
 				AA834F3A2AE7B84500245C17 /* CatchKenny.xcdatamodeld in Sources */,

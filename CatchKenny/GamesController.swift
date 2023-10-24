@@ -30,7 +30,7 @@ class GamesController: UIViewController {
     var hideTimer = Timer()
     var highScore = 0
     var userName : String?
-    var context : NSManagedObjectContext?
+   
    
     
     
@@ -41,7 +41,7 @@ class GamesController: UIViewController {
     }
     
     func initViewDidLoad() {
-        initContext()
+      
         scoreLabel.text = "\(TextConstants.score) \(score)"
         enableUserInteractionForKennyImages()
         setupTapRecognizersForKennyImages()
@@ -52,11 +52,7 @@ class GamesController: UIViewController {
         hideKenny()
     }
     
-    func initContext() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        context = appDelegate.persistentContainer.viewContext
-    }
-    
+
     func startTimers() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
         hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showRandomKenny), userInfo: nil, repeats: true)
@@ -104,10 +100,19 @@ class GamesController: UIViewController {
     }
     
     func saveScore() {
-        let newGame = NSEntityDescription.insertNewObject(forEntityName: "GameModel", into: context!)
-        newGame.setValue(userName, forKey: GameModelKeys.name.rawValue)
-        newGame.setValue(self.score, forKey: GameModelKeys.score.rawValue)
-        newGame.setValue(UUID(), forKey: GameModelKeys.id.rawValue)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newGame = NSEntityDescription.insertNewObject(forEntityName: "Scores", into: context)
+        newGame.setValue(userName, forKey: ScoreKeys.name.rawValue)
+        newGame.setValue(self.score, forKey: ScoreKeys.score.rawValue)
+        newGame.setValue(UUID(), forKey: ScoreKeys.id.rawValue)
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error")
+        }
         
         
     }

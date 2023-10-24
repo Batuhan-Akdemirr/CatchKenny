@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum GameModelKeys: String {
+enum ScoreKeys: String {
     case  id , name , score
 }
