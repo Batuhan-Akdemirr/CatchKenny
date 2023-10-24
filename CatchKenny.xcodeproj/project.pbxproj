@@ -51,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA2319092AE84D3200F17632 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AA834F4E2AE7DFF100245C17 /* HomePageController.swift */,
+				AA834F462AE7C1A900245C17 /* ScoresController.swift */,
+				AA834F482AE7D3D400245C17 /* GamesController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AA834F232AE7B84500245C17 = {
 			isa = PBXGroup;
 			children = (
@@ -70,13 +80,11 @@
 		AA834F2E2AE7B84500245C17 /* CatchKenny */ = {
 			isa = PBXGroup;
 			children = (
+				AA2319092AE84D3200F17632 /* Controller */,
 				AA834F572AE7FCF700245C17 /* Common */,
 				AA834F502AE7F9BB00245C17 /* Constants */,
 				AA834F2F2AE7B84500245C17 /* AppDelegate.swift */,
 				AA834F312AE7B84500245C17 /* SceneDelegate.swift */,
-				AA834F482AE7D3D400245C17 /* GamesController.swift */,
-				AA834F462AE7C1A900245C17 /* ScoresController.swift */,
-				AA834F4E2AE7DFF100245C17 /* HomePageController.swift */,
 				AA834F352AE7B84500245C17 /* Main.storyboard */,
 				AA834F3B2AE7B84600245C17 /* Assets.xcassets */,
 				AA834F3D2AE7B84600245C17 /* LaunchScreen.storyboard */,
