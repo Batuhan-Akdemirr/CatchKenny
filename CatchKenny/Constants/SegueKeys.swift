@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+
+enum SegueKeys : String {
+    case toGamesVC, toAllScoresVC, toHomeVC1, toHomeVC2
+}

@@ -7,23 +7,34 @@
 
 import UIKit
 
-class ScoresController: UIViewController {
+class ScoresController: UIViewController , UITableViewDelegate , UITableViewDataSource {
+    
+    @IBAction func goToHome(_ sender: Any) {
+        performSegue(withIdentifier: SegueKeys.toHomeVC2.rawValue, sender: nil)
+    }
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+      
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+               let cell = UITableViewCell()
+               var content = cell.defaultContentConfiguration()
+               content.text = "Test"
+               cell.contentConfiguration = content
+               return cell
+    }
+    
+   
+    
 }
